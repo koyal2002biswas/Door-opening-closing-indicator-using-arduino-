@@ -24,8 +24,8 @@ void loop()
   position = 0;
   for (position = 1; position <= 90; position += 1) {
     servo_9.write(position);
-   // digitalWrite(7, HIGH);
-    //digitalWrite(3, LOW);
+    digitalWrite(7, HIGH);
+    digitalWrite(3, LOW);
     Serial.println("door opening");
     delay(30); // Wait for 30 millisecond(s)
   }
@@ -34,8 +34,8 @@ void loop()
   noTone(10);
   for (position = 90; position >= 1; position -= 1) {
     servo_9.write(position);
-    //digitalWrite(7, LOW);
-    //digitalWrite(3, HIGH);
+    digitalWrite(7, LOW);
+    digitalWrite(3, HIGH);
     Serial.println("door closing");
     delay(30); // Wait for 30 millisecond(s)
   }
